@@ -1,1 +1,15 @@
+@import url(/node_modules/bootstrap-icons/font/bootstrap-icons.css);
+
 @import "custom";
+
+
+
+
+.font-title {
+    font-family: 'Londrina solid';
+}
+
+.navbar-brand{
+    font-family: 'Londrina solid';
+    color: $secondary;
+}
