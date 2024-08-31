@@ -1,0 +1,14 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+$primary: #4B5943;
+$secondary: #8FB43A;
+$dark: #232826;
+$body: #DCDFDA;
+$tertiary:#99B5AC;
+
+$font-family-sans-serif: "Inria Sans", sans-serif !default;
+$font-family-serif: "Londrina solid", serif !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
