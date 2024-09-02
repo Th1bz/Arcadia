@@ -11983,10 +11983,46 @@ footer.footer {
 }
 
 .font-title {
-  font-family: "Londrina solid";
+  font-family: "Londrina solid", serif;
+  font-size: 5rem;
+}
+
+.p-font-title {
+  font-size: 1.5rem;
+}
+
+.font-subtitle {
+  font-family: "Londrina solid", serif;
 }
 
 .navbar-brand {
-  font-family: "Londrina solid";
+  font-family: "Londrina solid", serif;
   color: #8FB43A;
+}
+
+.hero-scene {
+  position: relative;
+  box-shadow: 0 4px 4px 0;
+}
+.hero-scene::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../Images/Zoo/foret-mousse.jpg);
+  background-size: cover;
+  filter: brightness(0.6);
+}
+.hero-scene * {
+  position: relative;
+}
+
+.hero-scene-content {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

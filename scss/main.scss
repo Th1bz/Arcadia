@@ -2,28 +2,66 @@
 
 @import "custom";
 
-
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 main {
-    margin-bottom: 265px;
+  margin-bottom: 265px;
 }
 
 footer.footer {
-    padding: 15px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .font-title {
-    font-family: 'Londrina solid';
+  font-family: $font-family-serif;
+  font-size: 5rem;
 }
 
-.navbar-brand{
-    font-family: 'Londrina solid';
-    color: $secondary;
+.p-font-title {
+    font-size: 1.5rem;
+}
+
+.font-subtitle {
+    font-family: $font-family-serif;
+}
+
+.navbar-brand {
+  font-family: $font-family-serif;
+  color: $secondary;
+}
+
+// HERO SCÈNE ------------------------------------------
+
+.hero-scene {
+  position: relative;
+    box-shadow:0 4px 4px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Images/Zoo/foret-mousse.jpg);
+    background-size: cover;
+    filter: brightness(0.6);
+  }
+  *{
+      position: relative;
+  }
+}
+
+.hero-scene-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
