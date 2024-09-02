@@ -113,7 +113,7 @@
   --bs-border-radius-xxl: 2rem;
   --bs-border-radius-2xl: var(--bs-border-radius-xxl);
   --bs-border-radius-pill: 50rem;
-  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.5);
   --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -11969,6 +11969,7 @@ textarea.form-control-lg {
 html {
   position: relative;
   min-height: 100%;
+  background-color: #4B5943;
 }
 
 main {
@@ -12002,7 +12003,6 @@ footer.footer {
 
 .hero-scene {
   position: relative;
-  box-shadow: 0 4px 4px 0;
 }
 .hero-scene::before {
   content: "";
@@ -12020,9 +12020,65 @@ footer.footer {
 }
 
 .hero-scene-content {
-  height: 300px;
+  height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero-scene-title {
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.hero-scene-title:hover {
+  transform: scale(200%);
+  overflow: hidden;
+}
+
+.article-bg {
+  background-color: #4B5943;
+}
+
+.article-bg-2 {
+  background-color: #135803;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.cards-description {
+  transition: all 0.2S;
+}
+
+.cards-description:hover {
+  transform: scale(105%);
+  background-color: rgba(35, 40, 38, 0.5);
+  box-shadow: 0 10px 7px 0;
+}
+
+.img-card-h {
+  height: 159px;
+}
+
+.card {
+  background-color: #99B5AC;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(130%);
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-bottom: 290px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    margin-bottom: 585px;
+  }
 }/*# sourceMappingURL=main.css.map */
