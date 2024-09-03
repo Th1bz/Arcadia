@@ -39,6 +39,10 @@ footer.footer {
 
 // HERO SCÈNE ------------------------------------------
 
+.hero-ban {
+    height: 400px !important;
+}
+
 .hero-scene {
     position: relative;
     
@@ -95,7 +99,11 @@ footer.footer {
 .cards-description:hover {
     transform: scale(105%);
     background-color: rgba($color: #232826, $alpha: 0.5);
-    box-shadow: 0 10px 7px 0;
+    box-shadow: 0 10px 7px 0 $dark;
+}
+
+.img-cover-top {
+    object-position: 50% top;
 }
 
 .img-card-h {
@@ -121,6 +129,12 @@ footer.footer {
     background-color: $tertiary;
 }
 
+.line {
+    border: 3px $dark;
+    width: 500px;
+    height: 3px;
+    background: $dark;
+}
 
 // Responsive Design ----------------------------------------------
 

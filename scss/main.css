@@ -12001,6 +12001,10 @@ footer.footer {
   color: #8FB43A;
 }
 
+.hero-ban {
+  height: 400px !important;
+}
+
 .hero-scene {
   position: relative;
 }
@@ -12056,7 +12060,12 @@ footer.footer {
 .cards-description:hover {
   transform: scale(105%);
   background-color: rgba(35, 40, 38, 0.5);
-  box-shadow: 0 10px 7px 0;
+  box-shadow: 0 10px 7px 0 #232826;
+}
+
+.img-cover-top {
+  -o-object-position: 50% top;
+     object-position: 50% top;
 }
 
 .img-card-h {
@@ -12080,6 +12089,13 @@ footer.footer {
 
 .bg-avis {
   background-color: #99B5AC;
+}
+
+.line {
+  border: 3px #232826;
+  width: 500px;
+  height: 3px;
+  background: #232826;
 }
 
 @media (max-width: 1000px) {
