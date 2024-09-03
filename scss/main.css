@@ -12063,9 +12063,22 @@ footer.footer {
   box-shadow: 0 10px 7px 0 #232826;
 }
 
+.descritpion-habitat {
+  transition: all 0.2S;
+}
+
+.descritpion-habitat:hover {
+  transform: scale(105%);
+}
+
 .img-cover-top {
   -o-object-position: 50% top;
      object-position: 50% top;
+}
+
+.img-cover-bottom {
+  -o-object-position: 50% 60%;
+     object-position: 50% 60%;
 }
 
 .img-card-h {
