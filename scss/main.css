@@ -12042,7 +12042,7 @@ footer.footer {
 }
 
 .article-bg-2 {
-  background-color: #135803;
+  background-color: #137c8b;
 }
 
 .text-justify {
@@ -12070,6 +12070,16 @@ footer.footer {
 
 .card:hover {
   transform: scale(130%);
+}
+
+.p-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.bg-avis {
+  background-color: #99B5AC;
 }
 
 @media (max-width: 1000px) {

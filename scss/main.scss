@@ -81,7 +81,7 @@ footer.footer {
 }
 
 .article-bg-2 {
-    background-color: rgba($color: #135803, $alpha: 1.0);
+    background-color: rgba($color: #137C8B, $alpha: 1.0);
 }
 
 .text-justify {
@@ -110,6 +110,17 @@ footer.footer {
 .card:hover {
     transform: scale(130%);
 }
+
+.p-profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.bg-avis {
+    background-color: $tertiary;
+}
+
 
 // Responsive Design ----------------------------------------------
 
