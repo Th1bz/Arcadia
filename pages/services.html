@@ -43,15 +43,18 @@
     <!-- Lien -->
     <div class="container d-flex justify-content-center">
       <ul class="list-inline text-justify">
-        <li class="list-inline-item me-3"><a href="#restauration">Restauration</a></li>
+        <li class="list-inline-item me-3">
+          <a href="#restauration">Restauration</a>
+        </li>
         <li class="list-inline-item ms-3 me-3">
           <a href="#visite-guidee">Visite guidée</a>
         </li>
-        <li class="list-inline-item ms-3"><a href="#petit-train">Petit train</a></li>
+        <li class="list-inline-item ms-3">
+          <a href="#petit-train">Petit train</a>
+        </li>
       </ul>
     </div>
   </article>
-
 
   <!-- Restauration -->
   <article class="article-bg-2 shadow">
@@ -60,14 +63,99 @@
     </h2>
 
     <div class="container p-4">
-      <h2 id="restauration" class="text-center font-subtitle m-4">Notre restauration</h2>
+      <h2 id="restauration" class="text-center font-subtitle m-4">
+        Notre restauration
+      </h2>
+      <div class="cards-description align-items-center m-4 rounded-4">
+        <div class="text-center">
+          <div id="carouselRestauration" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../Images/Zoo/restaurant.jpg"
+                  class="d-block w-100 object-fit-cover shadow rounded mb-4 img-cover-bottom"
+                  style="height: 300px"
+                  alt="Photo d'un restaurant"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../Images/Zoo/restaurant-2.jpg"
+                  class="d-block w-100 object-fit-cover shadow rounded mb-4 img-cover-bottom"
+                  style="height: 300px"
+                  alt="Photo de la cuisine du restaurant"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../Images/Zoo/plat-restaurant.jpg"
+                  class="d-block w-100 object-fit-cover shadow rounded mb-4 img-cover-bottom"
+                  style="height: 300px"
+                  alt="Photo d'un plat"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselRestauration"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselRestauration"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-justify text-primary p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            repellendus accusamus laborum assumenda dicta voluptates nihil quia
+            distinctio enim, odit rem doloribus recusandae neque atque,
+            perferendis tempora nesciunt magni nam. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Quisquam eligendi, vero rerum odit
+            repellendus quasi voluptatem iure! Illo, aut debitis incidunt
+            distinctio voluptate sit, quos repudiandae numquam nostrum, cum
+            ipsam!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line -->
+    <div class="container d-flex justify-content-center">
+      <div class="line rounded shadow m-4"></div>
+    </div>
+  </article>
+
+  <!-- Visite guidée -->
+  <article class="article-bg shadow">
+    <div class="container p-4">
+      <h2 id="visite-guidee" class="text-center font-subtitle m-4">
+        Visite guidée
+      </h2>
       <div class="cards-description align-items-center m-4 rounded-4">
         <div class="text-center">
           <img
-            class="d-block w-100 object-fit-cover shadow rounded mb-4"
+            class="d-block w-100 object-fit-cover shadow rounded mb-4 img-cover-top"
             style="height: 300px"
-            src="../Images/Zoo/restaurant.jpg"
-            alt="Terrasse de restaurant"
+            src="../Images/Zoo/tour-guide.jpg"
+            alt="Guide touristique"
           />
         </div>
 
@@ -88,77 +176,39 @@
 
     <!-- Line -->
     <div class="container d-flex justify-content-center">
-        <div class="line rounded shadow m-4"></div>
-      </div>
+      <div class="line rounded shadow m-4"></div>
+    </div>
   </article>
 
-
-    <!-- Visite guidée -->
-    <article class="article-bg shadow">
-    
-        <div class="container p-4">
-          <h2 id="visite-guidee" class="text-center font-subtitle m-4">Visite guidée</h2>
-          <div class="cards-description align-items-center m-4 rounded-4">
-            <div class="text-center">
-              <img
-                class="d-block w-100 object-fit-cover shadow rounded mb-4 img-cover-top"
-                style="height: 300px"
-                src="../Images/Zoo/tour-guide.jpg"
-                alt="Guide touristique"
-              />
-            </div>
-    
-            <div class="text-center">
-              <p class="text-justify text-primary p-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                repellendus accusamus laborum assumenda dicta voluptates nihil quia
-                distinctio enim, odit rem doloribus recusandae neque atque,
-                perferendis tempora nesciunt magni nam. Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit. Quisquam eligendi, vero rerum odit
-                repellendus quasi voluptatem iure! Illo, aut debitis incidunt
-                distinctio voluptate sit, quos repudiandae numquam nostrum, cum
-                ipsam!
-              </p>
-            </div>
-          </div>
+  <!-- Petit train-->
+  <article class="article-bg-2 shadow">
+    <div class="container p-4">
+      <h2 id="petit-train" class="text-center font-subtitle m-4">
+        Notre Petit train
+      </h2>
+      <div class="cards-description align-items-center m-4 rounded-4">
+        <div class="text-center">
+          <img
+            class="d-block w-100 object-fit-cover shadow rounded mb-4"
+            style="height: 300px"
+            src="../Images/Zoo/petit-train.jpg"
+            alt="Petit train tour"
+          />
         </div>
-    
-        <!-- Line -->
-        <div class="container d-flex justify-content-center">
-            <div class="line rounded shadow m-4"></div>
-          </div>
-      </article>
 
-
-      <!-- Petit train-->
-    <article class="article-bg-2 shadow">
-    
-        <div class="container p-4">
-          <h2 id="petit-train" class="text-center font-subtitle m-4">Notre Petit train</h2>
-          <div class="cards-description align-items-center m-4 rounded-4">
-            <div class="text-center">
-              <img
-                class="d-block w-100 object-fit-cover shadow rounded mb-4 "
-                style="height: 300px"
-                src="../Images/Zoo/petit-train.jpg"
-                alt="Petit train tour"
-              />
-            </div>
-    
-            <div class="text-center">
-              <p class="text-justify text-primary p-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                repellendus accusamus laborum assumenda dicta voluptates nihil quia
-                distinctio enim, odit rem doloribus recusandae neque atque,
-                perferendis tempora nesciunt magni nam. Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit. Quisquam eligendi, vero rerum odit
-                repellendus quasi voluptatem iure! Illo, aut debitis incidunt
-                distinctio voluptate sit, quos repudiandae numquam nostrum, cum
-                ipsam!
-              </p>
-            </div>
-          </div>
+        <div class="text-center">
+          <p class="text-justify text-primary p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            repellendus accusamus laborum assumenda dicta voluptates nihil quia
+            distinctio enim, odit rem doloribus recusandae neque atque,
+            perferendis tempora nesciunt magni nam. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Quisquam eligendi, vero rerum odit
+            repellendus quasi voluptatem iure! Illo, aut debitis incidunt
+            distinctio voluptate sit, quos repudiandae numquam nostrum, cum
+            ipsam!
+          </p>
         </div>
-      </article>
-
+      </div>
+    </div>
+  </article>
 </section>
