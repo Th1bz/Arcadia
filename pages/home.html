@@ -160,6 +160,7 @@
     </h2>
 
     <div class="container pt-5 pb-5">
+
       <div
         class="d-flex justify-content-start align-items-center rounded-4 bg-avis shadow m-4 ps-5"
       >
@@ -177,7 +178,7 @@
           </div>
           <p>
             Une super journée, les Zoo c'est trop bien mais celui là est
-            partfait ! Surtout sont site internet qui est très beau et intuif
+            parfait ! Surtout sont site internet qui est très beau et intuif
           </p>
         </div>
       </div>
@@ -203,11 +204,39 @@
           </p>
         </div>
       </div>
+
     </div>
 
     <div class="d-flex justify-content-center">
-      <button type="button" class="btn btn-secondary m-3">Laissez nous un commentaire</button>
+      <button type="button" class="btn btn-secondary m-3" data-bs-toggle="modal" data-bs-target="#avisModal">Laissez nous un commentaire</button>
     </div>
+
+    <!-- Avis Modal -->
+<div class="modal fade" id="avisModal" tabindex="-1" aria-labelledby="avisModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="avisModalLabel">Déposer un avis</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form>
+              <div class="mb-3">
+                <label for="Nom" class="form-label">Votre Nom</label>
+                <input type="text" class="form-control" id="Nom" placeholder="Exemple: Justine Poitoux"> 
+              </div>
+              <div class="mb-3">
+                <label for="Commentaire" class="form-label">Votre commentaire</label>
+                <input type="text-area" class="form-control" id="commentaire">
+              </div>
+              <div class="text-center">
+                  <button type="button" class="btn btn-secondary">Enregistrer</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   </article>
 </section>
