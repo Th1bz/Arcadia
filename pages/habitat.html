@@ -77,7 +77,8 @@
       <div class="collapse" id="collapseSavane">
         <div class="m-4">
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary m-3">
+            <button type="button" data-bs-toggle="modal"
+            data-bs-target="#addCardModal" class="btn btn-secondary m-3">
               Ajouter un Animal
             </button>
           </div>
@@ -85,14 +86,14 @@
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
             <!-- Card 1 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Savane/elephants.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Elephant" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -117,14 +118,14 @@
             </a>
             <!-- Card 2 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Savane/giraffe.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Girafe" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -149,14 +150,14 @@
             </a>
             <!-- Card 3 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Savane/leopard.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Leopard" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -181,14 +182,14 @@
             </a>
             <!-- Card 4 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
                 <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
                   alt="Lion" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -213,14 +214,14 @@
             </a>
             <!-- Card 5 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Savane/zebres.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Zèbres" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -251,21 +252,18 @@
 
   <!-- Présentation de la Jungle -->
   <article class="article-bg shadow">
-    <h2 class="font-subtitle text-center text-secondary bg-dark p-2 shadow">
-      Regardons y de plus près :
-    </h2>
 
     <div>
-      <h2 id="savane" class="text-center font-subtitle bg-dark text-primary p-4">
-        La Savane
+      <h2 id="jungle" class="text-center font-subtitle bg-dark text-primary p-4">
+        La Jungle
       </h2>
 
       <div class="descritpion-habitat">
-        <a class="m-0" data-bs-toggle="collapse" href="#collapseSavane" role="button" aria-expanded="false"
-          aria-controls="collapseSavane">
-          <img src="../Images/Savane/sunset-savane.jpg"
+        <a class="m-0" data-bs-toggle="collapse" href="#collapseJungle" role="button" aria-expanded="false"
+          aria-controls="collapseJungle">
+          <img src="../Images/Jungle/jungle.jpg"
             class="d-block w-100 object-fit-cover img-cover-bottom shadow rounded" style="height: 350px"
-            alt="Couché de soleil sur la savane" />
+            alt="Une photo de la jungle tropical" />
           <h3 class="text-center m-2 pb-4">
             <i class="bi bi-arrow-down-square"></i> Développer
             <i class="bi bi-arrow-up-square"></i>
@@ -273,11 +271,12 @@
         </a>
       </div>
 
-      <!-- Liste collapse animaux Savane -->
-      <div class="collapse" id="collapseSavane">
+      <!-- Liste collapse animaux Jungle -->
+      <div class="collapse" id="collapseJungle">
         <div class="m-4">
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary m-3">
+            <button type="button" data-bs-toggle="modal"
+            data-bs-target="#addCardModal" class="btn btn-secondary m-3">
               Ajouter un Animal
             </button>
           </div>
@@ -285,14 +284,14 @@
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
             <!-- Card 1 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Jungle/jaguar.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Jaguar"/>
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -305,25 +304,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 2 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Jungle/Orangoutan.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Orangoutan"/>
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -336,25 +336,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 3 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Jungle/oustiti.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Ouistiti" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -367,25 +368,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 4 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Jungle/tigre.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Tigre" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -398,25 +400,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 5 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Jungle/toucan.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Toucan" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -429,11 +432,12 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
@@ -446,21 +450,18 @@
 
   <!-- Présentation du Marais -->
   <article class="article-bg shadow">
-    <h2 class="font-subtitle text-center text-secondary bg-dark p-2 shadow">
-      Regardons y de plus près :
-    </h2>
 
     <div>
-      <h2 id="savane" class="text-center font-subtitle bg-dark text-primary p-4">
-        La Savane
+      <h2 id="marais" class="text-center font-subtitle bg-dark text-primary p-4">
+        Le Marais
       </h2>
 
       <div class="descritpion-habitat">
-        <a class="m-0" data-bs-toggle="collapse" href="#collapseSavane" role="button" aria-expanded="false"
-          aria-controls="collapseSavane">
-          <img src="../Images/Savane/sunset-savane.jpg"
+        <a class="m-0" data-bs-toggle="collapse" href="#collapseMarais" role="button" aria-expanded="false"
+          aria-controls="collapseMarais">
+          <img src="../Images/Marais/marais2.jpg"
             class="d-block w-100 object-fit-cover img-cover-bottom shadow rounded" style="height: 350px"
-            alt="Couché de soleil sur la savane" />
+            alt="un jolie marais" />
           <h3 class="text-center m-2 pb-4">
             <i class="bi bi-arrow-down-square"></i> Développer
             <i class="bi bi-arrow-up-square"></i>
@@ -468,11 +469,12 @@
         </a>
       </div>
 
-      <!-- Liste collapse animaux Savane -->
-      <div class="collapse" id="collapseSavane">
+      <!-- Liste collapse animaux Marais -->
+      <div class="collapse" id="collapseMarais">
         <div class="m-4">
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary m-3">
+            <button type="button" data-bs-toggle="modal"
+            data-bs-target="#addCardModal" class="btn btn-secondary m-3">
               Ajouter un Animal
             </button>
           </div>
@@ -480,14 +482,14 @@
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
             <!-- Card 1 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Marais/alligator.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Alligator" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -500,25 +502,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 2 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Marais/flamingo.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Flamand rose" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -531,25 +534,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 3 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Marais/grenouille.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Grenouille" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -562,25 +566,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 4 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Marais/heron.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Heron" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -593,25 +598,26 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
             </a>
             <!-- Card 5 -->
             <a class="text-decoration-none">
-              <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
-                <img src="../Images/Savane/lion.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
-                  alt="Lion" />
+              <div class="image-card card p-0 m-4 shadow rounded-4" style="width: 15rem">
+                <img src="../Images/Marais/tortues.jpg" class="card-img-top object-fit-cover img-card-h rounded-top-4"
+                  alt="Tortues" />
                 <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
                   Nom Animal
                 </h5>
 
-                <div class="action-image-buttons d-flex justify-content-between ms-2 me-2">
+                <div class="action-image-buttons">
                   <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
                     data-bs-target="#EditionCardModal">
                     <i class="bi bi-pencil-square"></i>
@@ -624,11 +630,12 @@
 
                 <div class="card-body">
                   <ul class="card-text list-group-flush p-0">
-                    <li class="list-group-item">Race :</li>
-                    <li class="list-group-item">Santé :</li>
-                    <li class="list-group-item">Nourriture :</li>
-                    <li class="list-group-item">Grammage nourriture :</li>
-                    <li class="list-group-item">Date et avis du véto :</li>
+                    <li class="list-group-item"><strong>Race : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Santé : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Grammage nourriture : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Date : </strong><span>Insérer info en JS</span></li>
+                    <li class="list-group-item"><strong>Avis du véto : </strong><span>Insérer info en JS</span></li>
                   </ul>
                 </div>
               </div>
@@ -638,6 +645,70 @@
       </div>
     </div>
   </article>
+
+<!-- Modal ajout d'une Card -->
+<div class="modal fade" id="addCardModal" tabindex="-1" aria-labelledby="addCardModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="addCardModalLabel">
+        Ajouter une Carte Animal
+      </h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="NamePhotoInput" class="form-label">Nom de l'animal</label>
+          <input type="text" class="form-control" id="NamePhotoInput" placeholder="ex: Tierry" name="Titre" />
+        </div>
+
+        <div class="mb-3">
+          <label for="PhotoInput" class="form-label">Photo</label>
+          <input type="file" class="form-control" id="PhotoInput" name="Image" />
+        </div>
+
+        <div class="mb-3">
+          <label for="RaceAnimalInput" class="form-label">Race</label>
+          <input type="text" class="form-control" id="RaceAnimalInput" placeholder="ex: Lion" />
+        </div>
+
+        <div class="mb-3">
+          <label for="SanteAnimalInput" class="form-label">Race</label>
+          <input type="text" class="form-control" id="SanteAnimalInput" placeholder="ex: Blessure à la patte" />
+        </div>
+
+        <div class="mb-3">
+          <label for="NourritureInput" class="form-label">Nourriture</label>
+          <input type="text" class="form-control" id="NourritureInput" placeholder="ex: Steak de gazelle" />
+        </div>
+
+        <div class="mb-3">
+          <label for="grammageNourritureInput" class="form-label">Grammage nourriture</label>
+          <input type="text" class="form-control" id="grammageNourritureInput" placeholder="ex: 1000gr" />
+        </div>
+
+        <div class="mb-3">
+          <label for="dateVetoInput" class="form-label">Date de passage du Vétérinaire</label>
+          <input type="date" class="form-control" id="dateVetoInput" placeholder="" name="Date" />
+        </div>
+
+        <div class="mb-3">
+          <label for="avisVetoInput" class="form-label">Commentaire du Vétérinaire</label>
+          <input type="text" class="form-control" id="avisVetoInput" placeholder="ex: Rien à signaler" />
+        </div>
+
+        <div class="text-center">
+          <button type="button" class="btn btn-secondary">
+            Ajouter
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 
   <!-- Modal edition Card -->
   <div class="modal fade" id="EditionCardModal" tabindex="-1" aria-labelledby="EditionCardModalLabel"
@@ -716,8 +787,7 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="NameAnimalInput" class="form-label">Nom de l'animal</label>
-              <input type="text" class="form-control" id="NameAnimalInput" placeholder="ex: Tierry" name="Titre" />
+              <P>Êtes vous sur de vouloir supprimer cette carte Animal ?</p>
             </div>
 
             <div class="text-center">
