@@ -25,16 +25,24 @@
         <div class="invalid-feedback">Le MDP n'est pas assez robuste</div>
       </div>
       <div class="mb-3">
-        <label for="ValidatePasswordInput" class="form-label">Confirmez votre mot de passe</label>
+        <label for="ValidatePasswordInput" class="form-label">Confirmez le mot de passe</label>
         <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm" />
         <div class="invalid-feedback">Les champs MDP doivent êtres identiques</div>
+      </div>
+      <div class="mb-3">
+        <label for="roleInput" class="form-label">Définissez le rôle de l'utilisateur</label>
+        <select class="form-select" id="roleInput">
+          <option value="1" selected>Employé</option>
+          <option value="2">Vétérinaire</option>
+          <option value="3">Administrateur</option>
+        </select>
       </div>
       <div class="text-center">
         <button type="submit" class="btn btn-secondary" id="btn-valid-signup">Inscription</button>
       </div>
     </form>
     <div class="text-center pt-3">
-      <a href="/signin">Vous avez déjà un compte ? Connectez-vous ici !</a>
+      <a href="/signin">Page de connexion</a>
     </div>
   </div>
 </section>

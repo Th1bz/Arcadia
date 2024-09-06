@@ -1,10 +1,16 @@
 const tokenCookieName = "accesstoken";
+const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
 
 signoutBtn.addEventListener("click", signout);
 
+function getRole(){
+    return getCookie(RoleCookieName);
+}
+
 function signout(){
     eraseCookie(tokenCookieName);
+    eraseCookie(RoleCookieName);
     window.location.reload();
 }
 
@@ -15,9 +21,6 @@ function setToken(token){
 function getToken(){
     return getCookie(tokenCookieName);
 }
-
-
-
 
 function setCookie(name,value,days) {
     var expires = "";
@@ -51,4 +54,44 @@ function isConnected(){
     else{
         return true;
     }
+}
+
+
+// disconnected, connected (admin, vetérinaire ou employe)
+
+function showAndHideElementsForRole(){
+    const userConnected = isConnected();
+    const role= getRole();
+
+    let allElementsToEdit = document.querySelectorAll('[data-show]');
+
+    allElementsToEdit.forEach(element=>{
+        switch(element.dataset.show){
+            case 'disconnected':
+                if(userConnected){
+                    element.classList.add("d-none")
+                }
+                break;
+            case 'connected':
+                if(!userConnected){
+                    element.classList.add("d-none")
+                }
+                break;
+            case 'admin':
+                if(!userConnected || role != "admin"){
+                    element.classList.add("d-none")
+                }
+                break;
+            case 'veto':
+                if(!userConnected || role != "veto" && role !="admin"){
+                    element.classList.add("d-none")
+                }
+                break;
+            case 'employee':
+                if(!userConnected || role != "employee" && role !="admin"){
+                    element.classList.add("d-none")
+                }
+                break;
+        }
+    })
 }
