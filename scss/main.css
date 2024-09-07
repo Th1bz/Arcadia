@@ -12144,6 +12144,13 @@ footer.footer {
   height: 42px;
 }
 
+.edit-card-home {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-color: #232826;
+}
+
 .spinner-loader {
   background-color: #232826;
   position: fixed;

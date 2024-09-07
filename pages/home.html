@@ -49,11 +49,14 @@
 
     <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
       <!-- Card 1 -->
-      <a href="/habitat" class="text-decoration-none">
+      <div class="text-decoration-none">
         <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
           <img src="../Images/Savane/savane.jpg" class="card-img-top img-card-h rounded-top-4" alt="Savane" />
           <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
             La Savane
+            <button type="button" class="btn btn-outline-light text-info edit-card-home" data-bs-toggle="modal"
+            data-bs-target="#EditionCardHabitatModal" data-show="veto" data-show="admin">
+            <i class="bi bi-pencil-square"></i>
           </h5>
           <div class="card-body">
             <p class="card-text">
@@ -62,13 +65,16 @@
             </p>
           </div>
         </div>
-      </a>
+      </div>
       <!-- Card 2 -->
-      <a href="/habitat" class="text-decoration-none">
+      <div class="text-decoration-none">
         <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
           <img src="../Images/Jungle/jungle2.jpg" class="card-img-top img-card-h rounded-top-4" alt="Jungle" />
           <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
             La Jungle
+            <button type="button" class="btn btn-outline-light text-info edit-card-home" data-bs-toggle="modal"
+            data-bs-target="#EditionCardHabitatModal" data-show="veto" data-show="admin">
+            <i class="bi bi-pencil-square"></i>
           </h5>
           <div class="card-body">
             <p class="card-text">
@@ -77,14 +83,17 @@
             </p>
           </div>
         </div>
-      </a>
-
+      </div>
+      
       <!-- Card 3 -->
-      <a href="/habitat" class="text-decoration-none">
+      <div class="text-decoration-none">
         <div class="card p-0 m-4 shadow rounded-4" style="width: 15rem">
           <img src="../Images/Marais/marais.jpg" class="card-img-top img-card-h rounded-top-4" alt="Marais" />
           <h5 class="card-title font-subtitle text-center text-secondary bg-dark">
             Le Marais
+            <button type="button" class="btn btn-outline-light text-info edit-card-home" data-bs-toggle="modal"
+            data-bs-target="#EditionCardHabitatModal" data-show="veto" data-show="admin">
+            <i class="bi bi-pencil-square"></i>
           </h5>
           <div class="card-body">
             <p class="card-text">
@@ -93,7 +102,7 @@
             </p>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   </article>
 
@@ -425,8 +434,8 @@ aria-hidden="true">
 </div>
 </div>
 
-  <!-- Modal edition Services -->
-  <div class="modal fade" id="EditionServiceModal" tabindex="-1" aria-labelledby="EditionServiceModalLabel"
+<!-- Modal edition Services -->
+<div class="modal fade" id="EditionServiceModal" tabindex="-1" aria-labelledby="EditionServiceModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -462,6 +471,47 @@ aria-hidden="true">
         </div>
       </div>
     </div>
-  </div>
+</div>
 
+<!-- Modal edition card Habitat -->
+<div class="modal fade" id="EditionCardHabitatModal" tabindex="-1" aria-labelledby="EditionCardHabitatModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="EditionCardHabitatModalLabel">
+        Edition de l'habitat
+      </h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3" data-show="admin">
+          <label for="illustrationInput" class="form-label">Photo</label>
+          <input type="file" class="form-control" id="illustrationInput" name="Image" />
+        </div>
+
+        <div class="mb-3" data-show="admin">
+          <label for="nomHabitatInput" class="form-label">Nom de l'habitat</label>
+          <input type="text" class="form-control" id="nomHabitatInput" placeholder="ex: Savane" />
+        </div>
+
+        <div class="mb-3">
+          <label for="descriptionHabitatInput" class="form-label">Description de l'habitat</label>
+          <input type="text" class="form-control" id="descriptionHabitatInput" />
+        </div>
+
+        <div class="text-center">
+          <button type="button" class="btn btn-secondary">
+            Enregistrer
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Annuler
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 </section>

@@ -192,6 +192,13 @@ background: linear-gradient(145deg, rgba(75,89,67,1) 50%, rgba(220,223,218,1) 50
     height: 42px;
 }
 
+.edit-card-home {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    border-color: $dark;
+}
+
 .spinner-loader {
     background-color: #232826;
     position: fixed;
