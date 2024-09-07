@@ -10,7 +10,7 @@ html {
 
 main {
     margin-top: 56px;
-  margin-bottom: 265px;
+  margin-bottom: 263px;
 }
 
 footer.footer {
@@ -31,6 +31,13 @@ footer.footer {
 
 .font-subtitle {
     font-family: $font-family-serif;
+    
+}
+
+.title-sub-section {
+    color: $secondary;
+    font-weight: 450;
+    text-shadow: 0 5px 3px #232826;
 }
 
 .navbar-brand {
@@ -86,7 +93,9 @@ footer.footer {
 }
 
 .article-bg-2 {
-    background-color: rgba($color: #137C8B, $alpha: 1.0);
+    // background-color: rgba($color: #226D68, $alpha: 1.0);
+    background: rgb(75,89,67);
+background: linear-gradient(145deg, rgba(75,89,67,1) 50%, rgba(220,223,218,1) 50%);
 }
 
 .text-justify {
@@ -195,12 +204,12 @@ footer.footer {
 
 @media (max-width: 1000px) {
     main {
-        margin-bottom: 290px;
+        margin-bottom: 275px;
     }
 }
 
 @media (max-width: 768px) {
     main {
-        margin-bottom: 585px;
+        margin-bottom: 572px;
     }
 }

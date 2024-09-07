@@ -11974,7 +11974,7 @@ html {
 
 main {
   margin-top: 56px;
-  margin-bottom: 265px;
+  margin-bottom: 263px;
 }
 
 footer.footer {
@@ -11995,6 +11995,12 @@ footer.footer {
 
 .font-subtitle {
   font-family: "Londrina solid", serif;
+}
+
+.title-sub-section {
+  color: #8FB43A;
+  font-weight: 450;
+  text-shadow: 0 5px 3px #232826;
 }
 
 .navbar-brand {
@@ -12047,7 +12053,8 @@ footer.footer {
 }
 
 .article-bg-2 {
-  background-color: #137c8b;
+  background: rgb(75, 89, 67);
+  background: linear-gradient(145deg, rgb(75, 89, 67) 50%, rgb(220, 223, 218) 50%);
 }
 
 .text-justify {
@@ -12147,11 +12154,11 @@ footer.footer {
 
 @media (max-width: 1000px) {
   main {
-    margin-bottom: 290px;
+    margin-bottom: 275px;
   }
 }
 @media (max-width: 768px) {
   main {
-    margin-bottom: 585px;
+    margin-bottom: 572px;
   }
 }/*# sourceMappingURL=main.css.map */
