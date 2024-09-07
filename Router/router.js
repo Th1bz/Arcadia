@@ -47,7 +47,19 @@ const LoadContentPage = async () => {
 
   //Afficher et masqué les éléments en fonction du rôle
   showAndHideElementsForRole();
+
 };
+
+//Loader page
+const spinnerLoader = document.querySelector('.spinner-loader');
+
+window.addEventListener('load',()=>{
+  spinnerLoader.style.opacity = 0;
+
+  setTimeout(()=>{
+    spinnerLoader.style.display = 'none';
+  }, 300);
+});
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
