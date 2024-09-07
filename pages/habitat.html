@@ -41,9 +41,7 @@
     <div class="container d-flex justify-content-center">
       <ul class="list-inline text-justify">
         <li class="list-inline-item me-3"><a href="#savane">Savane</a></li>
-        <li class="list-inline-item ms-3 me-3">
-          <a href="#jungle">Jungle</a>
-        </li>
+        <li class="list-inline-item ms-3 me-3"><a href="#jungle">Jungle</a></li>
         <li class="list-inline-item ms-3"><a href="#marais">Marais</a></li>
       </ul>
     </div>
@@ -59,7 +57,7 @@
       <h2 id="savane" class="text-center font-subtitle bg-dark text-primary p-4">
         La Savane
         <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
-          data-bs-target="#EditionHabitatModal" data-show="employee" data-show="admin">
+          data-bs-target="#EditionHabitatModal" data-show="veto" data-show="admin">
           <i class="bi bi-pencil-square"></i>
       </h2>
 
@@ -85,9 +83,9 @@
             </button>
           </div>
           <div class="container d-flex justify-content-center text-justify text-primary">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, nobis? Obcaecati dolores consequatur
-            molestiae saepe voluptas, fugit ipsa aut, ad in aliquam asperiores officia eum minus minima. Minus, sequi
-            libero!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, nobis? Obcaecati dolores consequatur
+              molestiae saepe voluptas, fugit ipsa aut, ad in aliquam asperiores officia eum minus minima. Minus, sequi
+              libero!</p>
           </div>
 
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
@@ -269,7 +267,7 @@
       <h2 id="jungle" class="text-center font-subtitle bg-dark text-primary p-4">
         La Jungle
         <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
-          data-bs-target="#EditionHabitatModal" data-show="connected">
+          data-bs-target="#EditionHabitatModal" data-show="veto" data-show="admin">
           <i class="bi bi-pencil-square"></i>
       </h2>
 
@@ -297,7 +295,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, nobis? Obcaecati dolores consequatur
               molestiae saepe voluptas, fugit ipsa aut, ad in aliquam asperiores officia eum minus minima. Minus, sequi
               libero!</p>
-            </div>
+          </div>
 
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
             <!-- Card 1 -->
@@ -478,7 +476,7 @@
       <h2 id="marais" class="text-center font-subtitle bg-dark text-primary p-4">
         Le Marais
         <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
-          data-bs-target="#EditionHabitatModal" data-show="employee" data-show="admin">
+          data-bs-target="#EditionHabitatModal" data-show="veto" data-show="admin">
           <i class="bi bi-pencil-square"></i>
       </h2>
 
@@ -506,7 +504,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, nobis? Obcaecati dolores consequatur
               molestiae saepe voluptas, fugit ipsa aut, ad in aliquam asperiores officia eum minus minima. Minus, sequi
               libero!</p>
-            </div>
+          </div>
 
           <div class="d-flex flex-row justify-content-evenly flex-wrap p-4">
             <!-- Card 1 -->
@@ -835,7 +833,7 @@
     </div>
   </div>
 
-  <!-- Modal edition Services -->
+  <!-- Modal edition Habitat -->
   <div class="modal fade" id="EditionHabitatModal" tabindex="-1" aria-labelledby="EditionHabitatModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -848,12 +846,12 @@
         </div>
         <div class="modal-body">
           <form>
-            <div class="mb-3">
+            <div class="mb-3" data-show="admin">
               <label for="illustrationInput" class="form-label">Photo</label>
               <input type="file" class="form-control" id="illustrationInput" name="Image" />
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3" data-show="admin">
               <label for="nomHabitatInput" class="form-label">Nom de l'habitat</label>
               <input type="text" class="form-control" id="nomHabitatInput" placeholder="ex: Savane" />
             </div>
@@ -866,6 +864,9 @@
             <div class="text-center">
               <button type="button" class="btn btn-secondary">
                 Enregistrer
+              </button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                Annuler
               </button>
             </div>
           </form>
