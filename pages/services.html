@@ -65,6 +65,9 @@
     <div class="container p-4">
       <h2 id="restauration" class="text-center font-subtitle title-sub-section p-4">
         Notre restauration
+        <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
+      data-bs-target="#EditionServiceModal" data-show="employee" data-show="admin">
+      <i class="bi bi-pencil-square"></i>
       </h2>
       <div class="cards-description align-items-center m-4 rounded-4">
         <div class="text-center">
@@ -152,6 +155,9 @@
     <div class="container p-4">
       <h2 id="visite-guidee" class="text-center font-subtitle title-sub-section p-4">
         Visite guidée
+        <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
+      data-bs-target="#EditionServiceModal" data-show="employee" data-show="admin">
+      <i class="bi bi-pencil-square"></i>
       </h2>
       <div class="cards-description align-items-center m-4 rounded-4">
         <div class="text-center">
@@ -193,6 +199,9 @@
     <div class="container p-4">
       <h2 id="petit-train" class="text-center font-subtitle title-sub-section p-4">
         Notre Petit train
+        <button type="button" class="btn btn-outline-light text-info" data-bs-toggle="modal"
+      data-bs-target="#EditionServiceModal" data-show="employee" data-show="admin">
+      <i class="bi bi-pencil-square"></i>
       </h2>
       <div class="cards-description align-items-center m-4 rounded-4">
         <div class="text-center">
@@ -220,3 +229,43 @@
     </div>
   </article>
 </section>
+
+
+<!-- Modal edition Services -->
+<div class="modal fade" id="EditionServiceModal" tabindex="-1" aria-labelledby="EditionServiceModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="EditionServiceModalLabel">
+        Edition du Service
+      </h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="illustrationInput" class="form-label">Photo</label>
+          <input type="file" class="form-control" id="illustrationInput" name="Image" />
+        </div>
+
+        <div class="mb-3">
+          <label for="titreServiceInput" class="form-label">Titre du service</label>
+          <input type="text" class="form-control" id="titreServiceInput" placeholder="Visite guidée" />
+        </div>
+
+        <div class="mb-3">
+          <label for="descriptionServiceInput" class="form-label">Description du Service</label>
+          <input type="text" class="form-control" id="descriptionServiceInput"/>
+        </div>
+
+        <div class="text-center">
+          <button type="button" class="btn btn-secondary">
+            Enregistrer
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

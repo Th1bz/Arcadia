@@ -12138,6 +12138,12 @@ footer.footer {
   transition: all 0.3s;
 }
 
+.circle-border {
+  border-radius: 50px;
+  width: 42px;
+  height: 42px;
+}
+
 .spinner-loader {
   background-color: #232826;
   position: fixed;

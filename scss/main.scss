@@ -186,6 +186,12 @@ background: linear-gradient(145deg, rgba(75,89,67,1) 50%, rgba(220,223,218,1) 50
     }
 }
 
+.circle-border {
+    border-radius: 50px;
+    width: 42px;
+    height: 42px;
+}
+
 .spinner-loader {
     background-color: #232826;
     position: fixed;
