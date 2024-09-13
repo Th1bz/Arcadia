@@ -6,22 +6,22 @@
 
 <section>
   <div class="container p-5">
-    <form>
+    <form id="formulaireInscription">
       <div class="mb-3">
         <label for="NomInput" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="NomInput" placeholder="Nom utilisateur" name="Nom" />
+        <input type="text" class="form-control" id="NomInput" placeholder="Nom utilisateur" name="nom" />
       </div>
       <div class="mb-3">
         <label for="PrenomInput" class="form-label">Prénom</label>
-        <input type="text" class="form-control" id="PrenomInput" placeholder="Prénom utilisateur" name="Prenom" />
+        <input type="text" class="form-control" id="PrenomInput" placeholder="Prénom utilisateur" name="prenom" />
       </div>
       <div class="mb-3">
         <label for="EmailInput" class="form-label">Email</label>
-        <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email" />
+        <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="email" />
       </div>
       <div class="mb-3">
         <label for="PasswordInput" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" id="PasswordInput" name="Password" />
+        <input type="password" class="form-control" id="PasswordInput" name="mdp" />
         <div class="invalid-feedback">Le MDP n'est pas assez robuste</div>
       </div>
       <div class="mb-3">
@@ -31,13 +31,13 @@
       </div>
       <div class="mb-3">
         <label for="roleInput" class="form-label">Définissez le rôle de l'utilisateur</label>
-        <select class="form-select" id="roleInput">
+        <select class="form-select" id="roleInput" name="role">
           <option value="1" selected>Employé</option>
           <option value="2">Vétérinaire</option>
         </select>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-secondary" id="btn-valid-signup">Inscription</button>
+        <button type="button" class="btn btn-secondary" id="btn-valid-signup">Inscription</button>
       </div>
     </form>
     <div class="text-center pt-3">

@@ -1,4 +1,4 @@
 {
-    "phpserver.port": 4000,
+    "phpserver.port": 8000,
     "phpserver.relativePath": ""
 }
