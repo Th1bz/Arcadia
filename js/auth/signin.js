@@ -34,10 +34,11 @@ fetch(apiUrl+"login", requestOptions)
   }
 })
 .then(result => {
-  const token = result.apiToken;
-  setToken(token);
-  //placer ce token en cookie
-  setCookie(RoleCookieName, result.roles[0], 7);
+  console.log(result);
+  console.log(result.user);
+  sessionStorage.clear()
+  sessionStorage.setItem('user', JSON.stringify(result.user));
+
   alert("Bienvenue");
   window.location.replace("/");
 })

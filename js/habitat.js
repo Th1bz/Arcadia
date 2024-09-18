@@ -29,7 +29,7 @@ function getCardAnimal(urlImage, nom, race, sante, nourriture, grammage, dateVet
                     <i class="bi bi-pencil-square"></i>
                   </button>
                   <button type="button" class="btn btn-outline-light text-danger" data-bs-toggle="modal"
-                    data-bs-target="#DeleteCardModal" data-show="admin">
+                    data-bs-target="#DeleteCardModal" data-show="1">
                     <i class="bi bi-trash"></i>
                   </button>
                 </div>

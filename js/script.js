@@ -1,68 +1,70 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
-const apiUrl = "http://127.0.0.1:8000/api/";
+const apiUrl = "http://127.0.0.1:8000/";
 
 signoutBtn.addEventListener("click", signout);
 
-function getRole(){
-    return getCookie(RoleCookieName);
+function getUser(){
+    return sessionStorage.getItem('user');
 }
 
 function signout(){
-    eraseCookie(tokenCookieName);
-    eraseCookie(RoleCookieName);
+    sessionStorage.clear();
     window.location.reload();
 }
 
-function setToken(token){
-    setCookie(tokenCookieName, token, 7);
-}
+// function setToken(token){
+//     setCookie(tokenCookieName, token, 7);
+// }
 
-function getToken(){
-    return getCookie(tokenCookieName);
-}
+// function getToken(){
+//     return getCookie(tokenCookieName);
+// }
 
-function setCookie(name,value,days) {
-    let expires = "";
-    if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
+// function setCookie(name,value,days) {
+//     let expires = "";
+//     if (days) {
+//         let date = new Date();
+//         date.setTime(date.getTime() + (days*24*60*60*1000));
+//         expires = "; expires=" + date.toUTCString();
+//     }
+//     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+// }
 
-function getCookie(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
-    for(const element of ca) {
-        let c = element;
-        while (c.startsWith(' ')) c = c.substring(1,c.length);
-        if (c.startsWith(nameEQ))
-            return c.substring(nameEQ.length,c.length);
-        }
-        return null;
-}
+// function getCookie(name) {
+//     let nameEQ = name + "=";
+//     let ca = document.cookie.split(';');
+//     for(const element of ca) {
+//         let c = element;
+//         while (c.startsWith(' ')) c = c.substring(1,c.length);
+//         if (c.startsWith(nameEQ))
+//             return c.substring(nameEQ.length,c.length);
+//         }
+//         return null;
+// }
 
-function eraseCookie(name) {   
-    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
+// function eraseCookie(name) {   
+//     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+// }
 
 function isConnected(){
-    return !(getToken() == null || getToken == undefined);
+    return sessionStorage.getItem('user') !== null;
 }
 
 
-// disconnected, connected (admin, vetérinaire ou employe)
+// disconnected, connected (1, vetérinaire ou employe)
 
 function showAndHideElementsForRole(){
     const userConnected = isConnected();
-    const role= getRole();
+    const user = getUser();
+    console.log(user);
+    let roleId;
+    if (user) roleId = user.roleId;
 
     let allElementsToEdit = document.querySelectorAll('[data-show]');
 
-    allElementsToEdit.forEach((element)=>{
+    allElementsToEdit.forEach((element) => {
         switch(element.dataset.show){
             case 'disconnected':
                 if(userConnected){
@@ -74,18 +76,18 @@ function showAndHideElementsForRole(){
                     element.classList.add("d-none")
                 }
                 break;
-            case 'admin':
-                if(!userConnected || role != "admin"){
+            case '1':
+                if(!userConnected || roleId != "1"){
                     element.classList.add("d-none")
                 }
                 break;
-            case 'veto':
-                if(!userConnected || role != "veto" && role !="admin"){
+            case '2':
+                if(!userConnected || roleId != "2" && roleId != "1"){
                     element.classList.add("d-none")
                 }
                 break;
-            case 'employee':
-                if(!userConnected || role != "employee" && role !="admin"){
+            case '3':
+                if(!userConnected || roleId != "3" && roleId != "1"){
                     element.classList.add("d-none")
                 }
                 break;

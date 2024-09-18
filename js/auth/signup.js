@@ -7,6 +7,7 @@ const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-valid-signup");
 const formInscription = document.getElementById("formulaireInscription");
+const selector = document.getElementById("roleInput");
 
 
 inputNom.addEventListener("keyup", validateForm); 
@@ -93,19 +94,21 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd){
 
 function InscrireUtilisateur(){
 
-    let dataForm = new FormData(formInscription);
+    const dataForm = new FormData(formInscription);
   
     let myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Content-Type", "application/json", "no-cors");
   
   let raw = JSON.stringify({
       "firstName": dataForm.get("prenom"),
       "lastName": dataForm.get("nom"),
       "email": dataForm.get("email"),
       "password": dataForm.get("mdp"),
-      
+      "role": selector.value,
   });
   
+  console.log(raw);
+
   let requestOptions = {
     method: "POST",
     headers: myHeaders,
@@ -113,7 +116,7 @@ function InscrireUtilisateur(){
     redirect: "follow",
   };
   
-  fetch(apiUrl+"registration", requestOptions)
+  fetch(apiUrl+"signup", requestOptions)
   .then(response => {
     if(response.ok){
       return response.json();
